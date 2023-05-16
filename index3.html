@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body style="background-image: url('esatic.jpg');">
+
+    <div>
+        <img src="esatic.png" />
+    </div>
+
+    <div>
+        <h1 align="center">CRACK INFO 2023</h1>
+    </div>
+
+    <form>
+
+        <div class="form_page">
+            <div style="width: 48%;">
+
+                <div>
+                    <label>Nom<input type="text" placeholder="Entrer votre nom"></label>
+                </div>
+                <div>
+                    <label>Prénoms<input type="text" placeholder="Entrer votre prénom"></label>
+                </div>
+                <div>
+                    <label>Email<input type="text" placeholder="abc@example.com"></label>
+                </div>
+                <div>
+                    <label>Sexe
+                        <input type="radio" name="sexe" value="masculin">M
+                        <input type="radio" name="sexe" value="feminin">F</label>
+                </div>
+                <div>
+                    <label>Date de naissance<input type="date" name="datenaiss"></label>
+                </div>
+                <div>
+                    <label>Telephone<input type="number" placeholder="Entrer votre numéro de telephone"></label>
+                </div>
+                <div>
+                    <label>Motivation<br>
+                        <textarea rows="10" cols="40"></textarea><br>
+                    </label>
+                </div>
+
+            </div>
+            <div style="width: 48%">
+                <div id="image_aff" style="width: 150px; height: 150px; border: 1px solid black;">
+                  
+                </div>
+                <div>
+                    <input type="file" id="file-input" multiple onchange="previewImages()">
+                </div>
+                <div>
+                    <label for="niveau">Niveau
+                        <select name="niveau">
+                            <option value="defaut">----------</option>
+                            <option value="licence">Licence</option>
+                            <option value="master">Master</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label for="anglais">Anglais
+                        <input type="range" value="anglais" step="3" min="Nul" max="Elévé" />
+                    </label>
+                </div>
+                <div>
+                    <label for="specialite">Spécialité
+
+                        <input type="checkbox" name="specialite" value="bigdata">BIG DATA<br>
+                        <input type="checkbox" name="specialite" value="reseau">RESEAU<br>
+                        <input type="checkbox" name="specialite" value="develpt">DEVELOPPEMENT<br>
+                        <input type="checkbox" name="specialite" value="securite">SECURITE<br>
+
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <center>
+                <input type="submit" value="Envoyer" >
+                <input type="submit" value="Annuler" />
+            </center>
+        </div>
+    </form>
+    <h2 align="center">
+        <a href="mailto:kouamenock00@gmail.com">Nous écrire</a>
+    </h2>
+
+    <script>
+        function previewImages() {
+          const input = document.getElementById('file-input');
+          const container = document.getElementById('image_aff');
+          const files = input.files;
+          
+          for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const reader = new FileReader();
+            
+            reader.onload = function() {
+              const img = document.createElement('img');
+              img.src = reader.result;
+              container.appendChild(img);
+            }
+            
+            reader.readAsDataURL(file);
+          }
+        }
+      </script>
+
+</body>
+
+</html>
